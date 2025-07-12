@@ -1,41 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>H&C Fusion LLC</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>H&C Fusion - Essential Products</title>
   <style>
-    body { font-family: Georgia, serif; background-color: #fafafa; color: #111; margin: 0; padding: 0; }
-    header, section, footer { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-    h1, h2 { text-align: center; }
-    .products { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin-top: 30px; }
-    .product-img { width: 30%; min-width: 150px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    footer { text-align: center; font-size: 1.1em; border-top: 1px solid #ccc; margin-top: 40px; padding-top: 20px; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
+    header { background: #004080; color: white; padding: 20px; text-align: center; }
+    h1 { margin: 0; font-size: 2rem; }
+    .slogan { font-style: italic; margin-top: 5px; font-size: 1.1rem; }
+    main { max-width: 900px; margin: 20px auto; padding: 0 15px; }
+    section.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    article.product { background: white; border-radius: 8px; box-shadow: 0 2px 6px rgb(0 0 0 / 0.1); padding: 15px; }
+    article.product img { width: 100%; height: auto; border-radius: 6px; }
+    h2.product-title { margin: 10px 0 5px; font-size: 1.2rem; }
+    p.product-desc { font-size: 0.9rem; color: #555; }
+    p.product-price { font-weight: bold; margin-top: 8px; font-size: 1rem; color: #004080; }
+    section.about, section.shipping, section.contact {
+      background: white; margin: 30px 0; padding: 20px;
+      border-radius: 8px; box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+    }
+    h3 { border-bottom: 2px solid #004080; padding-bottom: 5px; color: #004080; }
+    form { display: flex; flex-direction: column; max-width: 400px; margin-top: 15px; }
+    label { margin: 10px 0 5px; }
+    input, textarea { padding: 8px; font-size: 1rem; border-radius: 4px; border: 1px solid #ccc; }
+    button { margin-top: 15px; padding: 10px; background: #004080; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #003060; }
+    footer { text-align: center; padding: 15px; font-size: 0.85rem; color: #777; }
+    @media (max-width: 600px) {
+      section.products { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>H&C Fusion LLC</h1>
-    <p style="text-align:center; font-size: 1.2em;">Trusted Supplies for Home &amp; Business</p>
-  </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>H&C Fusion LLC is a trusted supplier of high-quality products for both home and business needs. We offer a wide range of household goods, cleaning supplies, and office essentials to our customers. Our commitment to reliability and customer satisfaction ensures that you receive the best supplies for your requirements.</p>
+<header>
+  <h1>H&amp;C Fusion</h1>
+  <div class="slogan">Essential products for modern living.</div>
+</header>
+
+<main>
+  <section class="products" aria-label="Products">
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1586864380937-931dc8d54697?auto=format&fit=crop&w=800&q=80" alt="USB Mini Humidifier" />
+      <h2 class="product-title">USB Mini Humidifier – $14.95</h2>
+      <p class="product-desc">Silent and compact. Perfect for your bedroom or desk. USB powered.</p>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1609940012674-50e171fc9de5?auto=format&fit=crop&w=800&q=80" alt="3-in-1 Wireless Charger" />
+      <h2 class="product-title">3-in-1 Wireless Charger – $29.90</h2>
+      <p class="product-desc">Charge your phone, earbuds, and smartwatch at the same time. Sleek design.</p>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1589571894960-20bbe2828a27?auto=format&fit=crop&w=800&q=80" alt="LED Desk Lamp" />
+      <h2 class="product-title">LED Desk Lamp – $24.99</h2>
+      <p class="product-desc">Adjustable brightness, energy-saving LED light. Perfect for work or study.</p>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1644426952703-7cfb75f3792e?auto=format&fit=crop&w=800&q=80" alt="Reusable Silicone Bags" />
+      <h2 class="product-title">Reusable Silicone Food Storage Bags – $16.50</h2>
+      <p class="product-desc">Eco-friendly, leak-proof, microwave & dishwasher safe.</p>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1592847330973-312d1c3e5f3d?auto=format&fit=crop&w=800&q=80" alt="Bluetooth Wireless Earbuds" />
+      <h2 class="product-title">Bluetooth Wireless Earbuds – $39.99</h2>
+      <p class="product-desc">High-quality sound, noise-cancellation, 6 hours battery life.</p>
+    </article>
   </section>
 
-  <section>
-    <h2>Our Products</h2>
-    <div class="products">
-      <img src="https://raw.githubusercontent.com/github/explore/main/topics/html/html.png" alt="Paper Towels" class="product-img">
-      <img src="https://images.unsplash.com/photo-1609940012674-50e171fc9de5?auto=format&fit=crop&w=800&q=80" alt="Cleaning Bottles" class="product-img">
-      <img src="https://images.unsplash.com/photo-1589571894960-20bbe2828a27?auto=format&fit=crop&w=800&q=80" alt="Spray Bottles and Sponge" class="product-img">
-    </div>
-  </section>
-
-  <footer>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:contact@hcfusionllc.com">contact@hcfusionllc.com</a></p>
-  </footer>
-</body>
-</html>
+  <section class="about" aria-label="About Us">
+    <h3>About Us<
