@@ -1,190 +1,139 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>H&C Fusion - Essential Products</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0; padding: 0;
-    background: #f9f9f9; color: #333;
-  }
-  header {
-    background: #004080; color: white; padding: 20px; text-align: center;
-  }
-  h1 { margin: 0; font-size: 2rem; }
-  .slogan {
-    font-style: italic; margin-top: 5px; font-size: 1.1rem;
-  }
-  main {
-    max-width: 900px; margin: 20px auto; padding: 0 15px;
-  }
-  section.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  article.product {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    padding: 15px;
-  }
-  article.product img {
-    width: 100%; height: auto; border-radius: 6px;
-  }
-  h2.product-title {
-    margin: 10px 0 5px;
-    font-size: 1.2rem;
-  }
-  p.product-desc {
-    font-size: 0.9rem;
-    color: #555;
-  }
-  p.product-price {
-    font-weight: bold;
-    margin-top: 8px;
-    font-size: 1rem;
-    color: #004080;
-  }
-  section.about, section.contact {
-    background: white;
-    margin: 30px 0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  h3 {
-    border-bottom: 2px solid #004080;
-    padding-bottom: 5px;
-    color: #004080;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 600px;
-  }
-  label {
-    font-weight: bold;
-  }
-  input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-  }
-  button {
-    padding: 10px;
-    background: #004080;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  button:hover {
-    background: #003060;
-  }
-  footer {
-    text-align: center;
-    padding: 15px;
-    font-size: 0.85rem;
-    color: #777;
-  }
-  @media (max-width: 600px) {
-    section.products {
-      grid-template-columns: 1fr;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>H&C Fusion - Produits Essentiels</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f4f4; color: #333;
     }
-  }
-</style>
+    header {
+      background: #004080; color: white;
+      padding: 20px; text-align: center;
+    }
+    main {
+      max-width: 1000px; margin: auto; padding: 20px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .product img {
+      width: 100%; border-radius: 6px;
+    }
+    .product h2 {
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+    .product p {
+      font-size: 0.9rem; color: #666;
+    }
+    section {
+      background: white;
+      padding: 20px;
+      margin-top: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, textarea {
+      padding: 10px; font-size: 1rem;
+      border: 1px solid #ccc; border-radius: 4px;
+    }
+    button {
+      padding: 10px;
+      background: #004080; color: white;
+      border: none; border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center; padding: 15px; font-size: 0.85rem; color: #666;
+    }
+  </style>
 </head>
 <body>
+
 <header>
-  <h1>H&amp;C Fusion</h1>
-  <div class="slogan">Essential products for modern living.</div>
+  <h1>H&C Fusion LLC</h1>
+  <p>Produits essentiels pour la maison et le bureau</p>
 </header>
+
 <main>
-  <section class="products" aria-label="Products">
-    <article class="product">
+  <section class="products">
+    <div class="product">
       <img src="https://cdn.pixabay.com/photo/2017/08/06/00/46/humidifier-2587794_1280.jpg" alt="Mini humidificateur" />
-      <h2 class="product-title">Mini humidificateur – $14.95</h2>
-      <p class="product-desc">Silent and compact. USB powered.</p>
-      <p class="product-price">$14.95</p>
-    </article>
+      <h2>Mini Humidificateur</h2>
+      <p>Compact, silencieux, idéal pour chambre ou bureau.</p>
+    </div>
 
-    <article class="product">
+    <div class="product">
       <img src="https://cdn.pixabay.com/photo/2017/03/09/15/11/charger-2133997_1280.jpg" alt="Chargeur sans fil 3-en-1" />
-      <h2 class="product-title">Chargeur sans fil 3-en-1 – $29.90</h2>
-      <p class="product-desc">Charge phone, earbuds, and smartwatch simultaneously.</p>
-      <p class="product-price">$29.90</p>
-    </article>
+      <h2>Chargeur sans fil 3-en-1</h2>
+      <p>Recharge téléphone, écouteurs et montre en même temps.</p>
+    </div>
 
-    <article class="product">
-      <img src="https://cdn.pixabay.com/photo/2016/03/27/19/17/lamp-1284024_1280.jpg" alt="Lampe de bureau LED" />
-      <h2 class="product-title">Lampe de bureau LED – $24.99</h2>
-      <p class="product-desc">Adjustable brightness, energy-saving LED.</p>
-      <p class="product-price">$24.99</p>
-    </article>
+    <div class="product">
+      <img src="https://cdn.pixabay.com/photo/2016/03/27/19/17/lamp-1284024_1280.jpg" alt="Lampe LED" />
+      <h2>Lampe de Bureau LED</h2>
+      <p>Éclairage réglable, économie d’énergie, design moderne.</p>
+    </div>
 
-    <article class="product">
-      <img src="https://cdn.pixabay.com/photo/2018/02/07/17/28/silicone-bags-3139738_1280.jpg" alt="Sacs alimentaires en silicone" />
-      <h2 class="product-title">Sacs alimentaires en silicone – $16.50</h2>
-      <p class="product-desc">Eco-friendly, leak-proof, microwave safe.</p>
-      <p class="product-price">$16.50</p>
-    </article>
+    <div class="product">
+      <img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/paper-towels-1994396_1280.jpg" alt="Essuie-tout" />
+      <h2>Essuie-tout</h2>
+      <p>Rouleaux absorbants durables, pack familial.</p>
+    </div>
 
-    <article class="product">
-      <img src="https://cdn.pixabay.com/photo/2017/06/29/07/01/headphones-2450604_1280.jpg" alt="Écouteurs sans fil Bluetooth" />
-      <h2 class="product-title">Écouteurs sans fil Bluetooth – $39.99</h2>
-      <p class="product-desc">Noise-cancelling, 6h battery life.</p>
-      <p class="product-price">$39.99</p>
-    </article>
+    <div class="product">
+      <img src="https://cdn.pixabay.com/photo/2016/03/27/22/22/cleaning-1281547_1280.jpg" alt="Produits nettoyage" />
+      <h2>Produits de Nettoyage</h2>
+      <p>Sprays multi-surfaces pour cuisine, salle de bain, vitres.</p>
+    </div>
 
-    <article class="product">
-      <img src="https://cdn.pixabay.com/photo/2017/01/20/00/30/paper-towels-1994396_1280.jpg" alt="Essuie-tout (paper towels)" />
-      <h2 class="product-title">Essuie-tout (pack de 12) – $9.99</h2>
-      <p class="product-desc">Highly absorbent and durable rolls.</p>
-      <p class="product-price">$9.99</p>
-    </article>
-
-    <article class="product">
-      <img src="https://cdn.pixabay.com/photo/2016/03/27/22/22/cleaning-1281547_1280.jpg" alt="Produits de nettoyage" />
-      <h2 class="product-title">Produits de nettoyage (lot) – $12.99</h2>
-      <p class="product-desc">Multi-surface cleaners in 3 scents.</p>
-      <p class="product-price">$12.99</p>
-    </article>
-
-    <article class="product">
-      <img src="https://cdn.pixabay.com/photo/2020/06/08/14/12/spray-5276284_1280.jpg" alt="Bouteilles + éponge nettoyage" />
-      <h2 class="product-title">Bouteilles + éponge nettoyage – $7.99</h2>
-      <p class="product-desc">Great for home cleaning.</p>
-      <p class="product-price">$7.99</p>
-    </article>
+    <div class="product">
+      <img src="https://cdn.pixabay.com/photo/2020/06/08/14/12/spray-5276284_1280.jpg" alt="Spray + éponge" />
+      <h2>Spray + Éponge</h2>
+      <p>Pour entretien quotidien, multi-usages.</p>
+    </div>
   </section>
 
-  <section class="about" aria-label="About Us">
-    <h3>À propos de nous</h3>
-    <p>H&amp;C Fusion LLC est une entreprise basée aux États-Unis spécialisée dans la fourniture de produits essentiels de haute qualité pour la maison et le bureau. Nous nous engageons à offrir des solutions pratiques et durables pour améliorer votre quotidien, tout en garantissant un service client exceptionnel.</p>
+  <section>
+    <h2>À propos</h2>
+    <p>H&C Fusion LLC est une entreprise américaine spécialisée dans les produits de vie quotidienne pour la maison et le bureau. Nous sélectionnons des articles pratiques, durables et abordables. Nos clients nous font confiance pour la qualité de nos services et la fiabilité de nos produits.</p>
   </section>
 
-  <section class="contact" aria-label="Contact">
-    <h3>Contactez-nous</h3>
-    <form method="POST" action="https://formsubmit.co/contact@hcfusionllc.com">
+  <section>
+    <h2>Contact</h2>
+    <form action="https://formsubmit.co/contact@hcfusionllc.com" method="POST">
       <input type="hidden" name="_captcha" value="false" />
-      <label for="name">Nom</label>
-      <input id="name" name="name" type="text" required />
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" required />
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+      <label>Nom</label>
+      <input type="text" name="name" required />
+      <label>Email</label>
+      <input type="email" name="email" required />
+      <label>Message</label>
+      <textarea name="message" rows="5" required></textarea>
       <button type="submit">Envoyer</button>
     </form>
   </section>
 </main>
 
 <footer>
-  © 2025 H&amp;C Fusion LLC – Tous droits réservés
+  &copy; 2025 H&C Fusion LLC – Tous droits réservés
 </footer>
+
 </body>
 </html>
