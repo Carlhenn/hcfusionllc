@@ -5,74 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>H&C Fusion - Essential Products</title>
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5; color:#333; }
-    header { background:#004080; color:white; text-align:center; padding:20px; }
-    main { max-width:900px; margin:auto; padding:20px; }
-    .products { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
-    .product { background:white; padding:15px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-    .product img { width:100%; border-radius:6px; height:200px; object-fit:cover; }
-    .product h2 { margin:10px 0 5px; font-size:1.1rem; }
-    .product p { font-size:0.9rem; color:#555; }
-    section { background:white; margin-top:40px; padding:20px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
-    form { display:flex; flex-direction:column; gap:10px; }
-    input, textarea { padding:10px; border:1px solid #ccc; border-radius:4px; font-size:1rem; }
-    button { padding:10px; background:#004080; color:white; border:none; border-radius:4px; cursor:pointer; }
-    footer { text-align:center; padding:15px; font-size:0.85rem; color:#777; margin-top:40px; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
+    header { background: #004080; color: white; padding: 20px; text-align: center; }
+    h1 { margin: 0; font-size: 2rem; }
+    .slogan { font-style: italic; margin-top: 5px; font-size: 1.1rem; }
+    main { max-width: 900px; margin: 20px auto; padding: 0 15px; }
+    section.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    article.product { background: white; border-radius: 8px; box-shadow: 0 2px 6px rgb(0 0 0 / 0.1); padding: 15px; }
+    article.product img { width: 100%; height: auto; border-radius: 6px; }
+    h2.product-title { margin: 10px 0 5px; font-size: 1.2rem; }
+    p.product-desc { font-size: 0.9rem; color: #555; }
+    p.product-price { font-weight: bold; margin-top: 8px; font-size: 1rem; color: #004080; }
+    section.about, section.shipping, section.contact { background: white; margin: 30px 0; padding: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgb(0 0 0 / 0.1); }
+    h3 { border-bottom: 2px solid #004080; padding-bottom: 5px; color: #004080; }
+    form { display: flex; flex-direction: column; max-width: 400px; margin-top: 15px; }
+    label { margin: 10px 0 5px; }
+    input, textarea { padding: 8px; font-size: 1rem; border-radius: 4px; border: 1px solid #ccc; }
+    button { margin-top: 15px; padding: 10px; background: #004080; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #003060; }
+    footer { text-align: center; padding: 15px; font-size: 0.85rem; color: #777; }
+    @media (max-width: 600px) {
+      section.products { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>H&C Fusion LLC</h1>
-  <p>Your source for quality home & office products</p>
+  <h1>H&amp;C Fusion</h1>
+  <div class="slogan">Essential products for modern living.</div>
 </header>
 
 <main>
-  <section class="products">
-    <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2020/01/22/18/42/humidifier-4786291_1280.jpg" alt="USB Mini Humidifier" />
-      <h2>USB Mini Humidifier – $14.95</h2>
-      <p>Compact, quiet, USB-powered. Ideal for office and bedroom use.</p>
-    </div>
+  <section class="products" aria-label="Products">
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1586864380937-931dc8d54697?auto=format&fit=crop&w=800&q=80" alt="USB Mini Humidifier" />
+      <h2 class="product-title">USB Mini Humidifier – $14.95</h2>
+      <p class="product-desc">Silent and compact. Perfect for your bedroom or desk. USB powered.</p>
+    </article>
 
-    <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2022/10/27/17/40/charger-7551122_1280.jpg" alt="3-in-1 Wireless Charger" />
-      <h2>3-in-1 Wireless Charger – $29.90</h2>
-      <p>Charge your phone, earbuds, and smartwatch simultaneously.</p>
-    </div>
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1609940012674-50e171fc9de5?auto=format&fit=crop&w=800&q=80" alt="3-in-1 Wireless Charger" />
+      <h2 class="product-title">3-in-1 Wireless Charger – $29.90</h2>
+      <p class="product-desc">Charge your phone, earbuds, and smartwatch at the same time. Sleek design.</p>
+    </article>
 
-    <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2016/11/29/10/07/lamp-1868277_1280.jpg" alt="LED Desk Lamp" />
-      <h2>LED Desk Lamp – $24.99</h2>
-      <p>Adjustable brightness and modern design for your workspace.</p>
-    </div>
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1589571894960-20bbe2828a27?auto=format&fit=crop&w=800&q=80" alt="LED Desk Lamp" />
+      <h2 class="product-title">LED Desk Lamp – $24.99</h2>
+      <p class="product-desc">Adjustable brightness, energy-saving LED light. Perfect for work or study.</p>
+    </article>
 
-    <div class="product">
-      <img src="https://cdn.pixabay.com/photo/2022/03/24/16/50/paper-towels-7089810_1280.jpg" alt="Paper Towels" />
-      <h2>Paper Towels – $12.50</h2>
-      <p>Strong, absorbent, and eco-friendly. 6-roll pack.</p>
-    </div>
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1644426952703-7cfb75f3792e?auto=format&fit=crop&w=800&q=80" alt="Reusable Silicone Food Storage Bags" />
+      <h2 class="product-title">Reusable Silicone Food Storage Bags (Set of 3) – $16.50</h2>
+      <p class="product-desc">Eco-friendly, leak-proof, microwave &amp; dishwasher safe.</p>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1592847330973-312d1c3e5f3d?auto=format&fit=crop&w=800&q=80" alt="Bluetooth Wireless Earbuds" />
+      <h2 class="product-title">Bluetooth Wireless Earbuds – $39.99</h2>
+      <p class="product-desc">High-quality sound, noise-cancellation, 6 hours battery life.</p>
+    </article>
   </section>
 
-  <section>
-    <h2>About Us</h2>
-    <p>H&C Fusion LLC is a U.S.-based company offering carefully curated lifestyle products to enhance comfort and efficiency at home or work. We focus on quality, value, and dependable customer service to deliver top-end experiences.</p>
+  <section class="about" aria-label="About Us">
+    <h3>About Us</h3>
+    <p>H&amp;C Fusion is a US-based company providing carefully selected lifestyle products to improve everyday comfort and productivity. We value quality, functionality, and simplicity.</p>
   </section>
 
-  <section>
-    <h2>Contact Us</h2>
-    <form action="https://formsubmit.co/contact@hcfusionllc.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <label>Your Name</label><input type="text" name="name" required>
-      <label>Your Email</label><input type="email" name="email" required>
-      <label>Your Message</label><textarea name="message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
+  <section class="shipping" aria-label="Shipping and Returns">
+    <h3>Shipping &amp; Returns</h3>
+    <p><strong>Shipping:</strong> 3–5 business days via USPS.</p>
+    <p><strong>Returns:</strong> Accepted within 30 days of delivery.</p>
+  </section>
+
+  <section class="contact" aria-label="Contact">
+    <h3>Contact</h3>
+    <form action="mailto:contact@hcfusionllc.com" method="post" enctype="text/plain">
+      <label for="name">Name:</label>
+      <input id="name" name="name" type="text" required />
+      
+      <label for="email">Email:</label>
+      <input id="email" name="email" type="email" required />
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      
+      <button type="submit">Send</button>
     </form>
   </section>
 </main>
 
 <footer>
-  &copy; 2025 H&C Fusion LLC – All rights reserved.
+  © 2025 H&amp;C Fusion LLC – All Rights Reserved
 </footer>
 
 </body>
